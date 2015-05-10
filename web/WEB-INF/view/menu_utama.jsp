@@ -6,7 +6,7 @@ and open the template in the editor.
 -->
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Selamat Datang di Nama Aplikasi</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -42,8 +42,17 @@ and open the template in the editor.
     </head>
     <body>
         <div class="container-fluid">
+            <div class="row" style="background-color:white">
+            <div class="col-lg-5">
+                <div class="col-lg-offset-4" >
+                    <img src="./img/logo-its-21.jpg" style="height: 90px; width:165px"/>
+                    <img src="./img/SI.png" style="height: 90px; width:187px"/>
+                    </div>
+                </div>
+            </div>
+    
             <div class="row">
-                <div class="col-lg-10">
+                <div class="col-lg-10">                    
                     <h1 class="page-header text-right">Nama Aplikasi</h1>
                 </div>
             </div>
@@ -52,16 +61,17 @@ and open the template in the editor.
                 <div class="col-lg-5">
                     <div class="col-lg-offset-4">
                         <h3>Menu Utama</h3>
-                        <h5>10 November 2015</h5>
+                        <%java.text.DateFormat df = new java.text.SimpleDateFormat("EEEE, dd MMMM yyyy", new java.util.Locale("id")); %>
+                        <h5><%= df.format(new java.util.Date()) %></h5>
                         <br>
-                        <h5>Selamat Datang Mahasiswa</h5>
-                        <h5>Nama    : Jono</h5>
-                        <h5>NRP     : 5210100000</h5>
+                        <h5>Selamat Datang <%= request.getParameter( "Status" ) %></h5>
+                        <h5>Nama    : <%= request.getParameter( "firstName" ) %></h5>
+                        <h5>NRP     : <%= request.getParameter( "NRP" ) %></h5>
                     </div>
                 </div>
                 
                 <div class="col-lg-7">
-                    <div class="col-lg-8" style="margin-top: 60px">
+                    <div class="col-lg-8" style="margin-top: 60px; margin-left: 50px">
                         <a href="membuatSurat" class="btn btn-outline btn-primary btn-lg btn-block">Membuat Surat</a>
                         <br>
                         <a href="statusSurat" class="btn btn-outline btn-primary btn-lg btn-block">Status Surat</a>
