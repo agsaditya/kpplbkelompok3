@@ -12,15 +12,15 @@
 @prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
 @prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
 
-@prefix konsep: <http://localhost/konsep#> .
-@prefix dimensi: <http://localhost/dimensi#> .
-@prefix stats: <http://localhost/statistik#> .
-@prefix vocab: <http://localhost/vocab#> .
-@prefix kecamatan: <http://localhost/kecamatan/> .
-@prefix puskesmas: <http://localhost/puskesmas/> .
-@prefix puskes-prop: <http://localhost/puskesmas/property/> .
-@prefix sumberair: <http://localhost/sumberair/> .
-@prefix tempatsampah: <http://localhost/tempatsampah/> .
+@prefix konsep: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix dimensi: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix stats: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix vocab: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix kecamatan: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix puskesmas: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix puskes-prop: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix sumberair: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
+@prefix tempatsampah: <https://github.com/agsaditya/kpplbkelompok3/blob/master/rdf#> .
 
 
 # -- Vocab  ----------------------------
