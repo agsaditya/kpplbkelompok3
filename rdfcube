@@ -20,7 +20,7 @@
 @prefix puskesmas: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
 @prefix puskes-prop: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
 @prefix sumberair: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
-@prefix tempatsampah: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix tempatsampah: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> . 
 
 
 # -- Vocab  ----------------------------
