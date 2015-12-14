@@ -1,0 +1,2319 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+@prefix konsep: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix dimensi: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix stats: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix vocab: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix kecamatan: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix puskesmas: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix puskes-prop: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix sumberair: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+@prefix tempatsampah: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+
+@prefix eg: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube#> .
+
+
+# -- Vocab  ----------------------------
+
+vocab:kecamatan a rdfs:Class .
+vocab:puskesmas a rdfs:Class .
+vocab:data_puskesmas a rdfs:Class .
+
+
+
+# -- Concept  ----------------------------
+
+konsep:Puskesmas_Surabaya 
+    a skos:ConceptScheme ;
+    rdfs:label "Puskesmas_di_Surabaya";
+    skos:hasTopConcept puskesmas:Tanjungsari, puskesmas:Simomulyo, puskesmas:Manukan_Kulon, puskesmas:Balongsari, puskesmas:Asemrowo, puskesmas:Sememi, puskesmas:Benowo, puskesmas:Jeruk, puskesmas:Lidah_Kulon, puskesmas:Bangkingan, puskesmas:Lontar, puskesmas:Made, puskesmas:Paneleh, puskesmas:Ketabang, puskesmas:Kedungdoro, puskesmas:Dr_Soetomo, puskesmas:Tembok_Dukuh, puskesmas:Gundih, puskesmas:Tambakrejo, puskesmas:Simolawang, puskesmas:Perak_Timur, puskesmas:Pegirian, puskesmas:Sidotopo, puskesmas:Wonokusumo, puskesmas:Krembangan_Sel, puskesmas:Dupak, puskesmas:Kenjeran, puskesmas:Tanah_Kali_K, puskesmas:Sidotopo_W, puskesmas:Rangkah, puskesmas:Pacar_Keling, puskesmas:Gading, puskesmas:Pucangsewu, puskesmas:Mojo, puskesmas:Kalirungkut, puskesmas:Medokan_Ayu, puskesmas:Tenggilis, puskesmas:Gunung_Anyar, puskesmas:Menur, puskesmas:Klampis_Ngasem, puskesmas:Keputih, puskesmas:Mulyorejo, puskesmas:Sawahan, puskesmas:Putat_Jaya, puskesmas:Banyu_Urip, puskesmas:Pakis, puskesmas:Jagir, puskesmas:Wonokromo, puskesmas:Ngagelrejo, puskesmas:Kedurus, puskesmas:Dukuh_Kupang, puskesmas:Wiyung, puskesmas:Balas_Klumprik, puskesmas:Gayungan, puskesmas:Jemursari, puskesmas:Sidosermo, puskesmas:Siwalankerto, puskesmas:Kebonsari;
+    skos:notation "Puskesmas_Surabaya" .
+
+konsep:Kecamatan_Surabaya 
+    a skos:ConceptScheme ;
+    rdfs:label "Puskesmas_di_Surabaya";
+    skos:hasTopConcept kecamatan:Sukomanunggal, kecamatan:Tandes, kecamatan:Asemrowo, kecamatan:Sememi, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep, kecamatan:Genteng, kecamatan:Tegalsari, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Bulak, kecamatan:Kenjeran, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karang_Pilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Gayungan, kecamatan:Wonocolo, kecamatan:Jambangan;
+    skos:notation "Kecamatan_Surabaya" .    
+
+konsep:Sumber_Air 
+    a skos:ConceptScheme ;
+    rdfs:label "Sumber_Air";
+    skos:hasTopConcept sumberair:Leding_Meteran, sumberair:Pompa, sumberair:Sumur_Terlindung, sumberair:Sumur_Tak_Terlindung; 
+    skos:notation "Sumber_Air" .
+
+konsep:Tempat_Sampah 
+    a skos:ConceptScheme ;
+    rdfs:label "Tempat_Sampah";
+    skos:hasTopConcept tempatsampah:Keluarga_Diperiksa, tempatsampah:Keluarga_Memiliki, tempatsampah:Sehat;
+    skos:notation "Tempat_Sampah" .
+
+
+
+# -- Dimensions----------------------------
+
+dimensi:waktu a rdf:Property, qb:DimensionProperty;
+    rdfs:label "referensi waktu"@id;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod;
+    rdfs:range xsd:gYear;
+    qb:concept sdmx-concept:refPeriod ;
+    .
+
+dimensi:puskesmas
+    rdfs:label "referensi puskesmas"@id;
+    qb:codeList konsep:Puskesmas_Surabaya;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:kecamatan
+    rdfs:label "referensi kecamatan"@id;
+    qb:codeList konsep:Kecamatan_Surabaya;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:sumberair
+    rdfs:label "referensi sumber air"@id;
+    qb:codeList konsep:Sumber_Air;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:tempatsampah
+    rdfs:label "referensi tempat sampah"@id;
+    qb:codeList konsep:Tempat_Sampah;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+
+
+# -- Measures  ----------------------------    
+
+stats:jml_keluarga_diperiksa_sumber_air a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga diperiksa sumber air"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .    
+
+stats:jml_leding_meteran a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah leding meteran"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_leding_meteran a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase leding meteran"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_pompa a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah leding pompa"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_pompa a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase pompa"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .           
+
+stats:jml_sumur_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah sumur terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .  
+
+stats:persentase_sumur_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase sumur terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .  
+
+stats:jml_sumur_tak_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah sumur tak terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_sumur_tak_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase sumur tak terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_sumber_air_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jml keluarga sumber air terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_sumber_air_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga sumber air terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:total_jml_keluarga a rdf:Property, qb:MeasureProperty;
+    rdfs:label "total jumlah keluarga"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:jml_keluarga_diperiksa_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga diperiksa tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_diperiksa_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga diperiksa tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_memiliki_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga memiliki tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_memiliki_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga memiliki tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_memiliki_tempat_sampah_sehat a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga memiliki tempat sampah sehat"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_memiliki_tempat_sampah_sehat a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga memiliki tempat sampah sehat"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+
+
+# -- Property  ----------------------------
+
+puskes-prop:berlokasi_di_kecamatan a rdf:Property .
+puskes-prop:berlokasi_di_kecamatan  rdfs:domain vocab:puskesmas .
+puskes-prop:berlokasi_di_kecamatan  rdfs:range vocab:kecamatan.
+
+puskes-prop:data_puskesmas_dari a rdf:Property .
+puskes-prop:data_puskesmas_dari rdfs:domain vocab:data_puskesmas.
+puskes-prop:data_puskesmas_dari rdfs:range vocab:puskesmas.
+
+
+
+
+# -- Data set ----------------------------
+
+stats:data_puskesmas_2012
+    a qb:DataSet;
+    qb:structure stats:dsd-pk.
+
+
+
+# -- Data structure definition  ----------------------------
+
+stats:dsd-pk
+    a qb:DataStructureDefinition ;
+
+    # The dimensions
+    qb:component 
+        [qb:dimension dimensi:puskesmas],
+        [qb:dimension dimensi:kecamatan],
+        [qb:dimension dimensi:waktu],
+        [qb:dimension dimensi:sumberair],
+        [qb:dimension dimensi:tempatsampah]; 
+
+    # The measure(s)
+    qb:component 
+        [ qb:measure stats:jml_keluarga_diperiksa_sumber_air],
+        [ qb:measure stats:jml_leding_meteran],
+        [ qb:measure stats:persentase_leding_meteran],
+        [ qb:measure stats:jml_pompa],
+        [ qb:measure stats:persentase_pompa],
+        [ qb:measure stats:jml_sumur_terlindung],
+        [ qb:measure stats:persentase_sumur_terlindung],
+        [ qb:measure stats:jml_sumur_tak_terlindung],
+        [ qb:measure stats:persentase_sumur_tak_terlindung],
+        [ qb:measure stats:jml_keluarga_sumber_air_terlindung],
+        [ qb:measure stats:persentase_keluarga_sumber_air_terlindung],
+        [ qb:measure stats:total_jml_keluarga],
+        [ qb:measure stats:jml_keluarga_diperiksa_tempat_sampah],
+        [ qb:measure stats:persentase_keluarga_diperiksa_tempat_sampah],
+        [ qb:measure stats:jml_keluarga_memiliki_tempat_sampah],
+        [ qb:measure stats:persentase_keluarga_memiliki_tempat_sampah],
+        [ qb:measure stats:jml_keluarga_memiliki_tempat_sampah_sehat],
+        [ qb:measure stats:persentase_keluarga_memiliki_tempat_sampah_sehat] .
+
+
+
+# -- Data definition  ----------------------------
+
+kecamatan:Sukomanunggal 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sukomanunggal";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tandes 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tandes";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Asemrowo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Asemrowo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sememi 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sememi";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Pakal 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Pakal";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Lakarsantri 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Lakarsantri";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sambikerep 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sambikerep";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Genteng 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Genteng";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tegalsari 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tegalsari";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Bubutan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Bubutan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Simokerto 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Simokerto";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Pabean_Cantikan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Pabean_Cantikan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Semampir 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Semampir";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Krembangan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Krembangan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Bulak 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Bulak";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Kenjeran 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Kenjeran";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tambaksari 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tambaksari";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gubeng 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gubeng";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Rungkut 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Rungkut";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tenggilis 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tenggilis";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gunung_Anyar 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gunung_Anyar";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sukolilo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sukolilo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Mulyorejo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Mulyorejo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sawahan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sawahan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wonokromo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wonokromo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Karang_Pilang 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Karang_Pilang";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Dukuh_Pakis 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Dukuh_Pakis";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wiyung 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wiyung";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gayungan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gayungan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wonocolo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wonocolo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Jambangan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Jambangan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+
+puskesmas:Tanjungsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tanjungsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukomanunggal;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Simomulyo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Simomulyo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukomanunggal;
+    skos:inScheme konsep:Puskesmas_Surabaya .  
+
+puskesmas:Manukan_Kulon 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Manukan_Kulon";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tandes;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Balongsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Balongsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tandes;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Asemrowo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Asemrowo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Asemrowo;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Sememi 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sememi";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sememi;
+    skos:inScheme konsep:Puskesmas_Surabaya .     
+
+puskesmas:Benowo
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Benowo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Pakal;
+    skos:inScheme konsep:Puskesmas_Surabaya .       
+
+puskesmas:Jeruk
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jeruk";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Lidah_Kulon 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Lidah_Kulon";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .         
+
+puskesmas:Bangkingan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Bangkingan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Lontar 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Lontar";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sambikerep;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Made 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Made";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sambikerep;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Paneleh 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Paneleh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Genteng;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Ketabang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Ketabang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Genteng;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Kedungdoro 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kedungdoro";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tegalsari;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Dr_Soetomo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dr_Soetomo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tegalsari;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Tembok_Dukuh 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tembok_Dukuh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bubutan;
+    skos:inScheme konsep:Puskesmas_Surabaya .  
+
+puskesmas:Gundih 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tembok_Dukuh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bubutan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tambakrejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tambakrejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Simokerto;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Simolawang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Simolawang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Simokerto;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Perak_Timur 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Perak_Timur";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Pabean_Cantikan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pegirian 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pegirian";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidotopo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidotopo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wonokusumo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wonokusumo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Krembangan_Sel 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Krembangan_Sel";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Krembangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Dupak 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dupak";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Krembangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kenjeran 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kenjeran";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bulak;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tanah_Kali_K 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tanah_Kali_K";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Kenjeran;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidotopo_W 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidotopo_W";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Kenjeran;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Rangkah 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Rangkah";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pacar_Keling 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pacar_Keling";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Gading 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gading";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pucangsewu 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pucangsewu";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gubeng;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Mojo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Mojo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gubeng;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kalirungkut 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kalirungkut";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Rungkut;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Medokan_Ayu 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Medokan_Ayu";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Rungkut;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tenggilis 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tenggilis";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tenggilis;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Gunung_Anyar 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gunung_Anyar";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gunung_Anyar;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Menur 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Menur";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Klampis_Ngasem 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Klampis_Ngasem";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Keputih 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Keputih";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Mulyorejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Mulyorejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Mulyorejo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sawahan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sawahan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Putat_Jaya 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Putat_Jaya";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Banyu_Urip 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Banyu_Urip";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pakis 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pakis";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Jagir 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jagir";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wonokromo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wonokromo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Ngagelrejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Ngagelrejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kedurus 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kedurus";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Karang_Pilang;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Dukuh_Kupang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dukuh_Kupang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Dukuh_Pakis;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wiyung 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wiyung";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wiyung;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Balas_Klumprik 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Balas_Klumprik";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wiyung;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Gayungan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gayungan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gayungan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Jemursari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jemursari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidosermo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidosermo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Siwalankerto 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Siwalankerto";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kebonsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kebonsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Jambangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+
+sumberair:Leding_Meteran 
+    a skos:Concept;
+    rdfs:label "Leding_Meteran";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Pompa 
+    a skos:Concept;
+    rdfs:label "Pompa";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Sumur_Terlindung 
+    a skos:Concept;
+    rdfs:label "Sumur_Terlindung";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Sumur_Tak_Terlindung 
+    a skos:Concept;
+    rdfs:label "Sumur_Tak_Terlindung";
+    skos:inScheme konsep:Sumber_Air . 
+
+
+tempatsampah:Keluarga_Diperiksa
+    a skos:Concept;
+    rdfs:label "Sumur_Tak_Terlindung";
+    skos:inScheme konsep:Tempat_Sampah .
+
+tempatsampah:Keluarga_Memiliki
+    a skos:Concept;
+    rdfs:label "Keluarga_Memiliki";
+    skos:inScheme konsep:Tempat_Sampah .
+
+tempatsampah:Sehat
+    a skos:Concept;
+    rdfs:label "Sehat";
+    skos:inScheme konsep:Tempat_Sampah .
+
+# -- Observation ----------------------------
+
+puskes-prop:data_1
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukomanunggal;
+    dimensi:puskesmas puskesmas:Tanjungsari;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tanjungsari;
+    stats:jml_keluarga_diperiksa_sumber_air 3385;
+    stats:jml_leding_meteran 3339;
+    stats:persentase_leding_meteran 98.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 36;
+    stats:persentase_sumur_terlindung 1.1;
+    stats:jml_sumur_tak_terlindung 10;
+    stats:persentase_sumur_tak_terlindung 0.3;
+    stats:jml_keluarga_sumber_air_terlindung 3375;
+    stats:persentase_keluarga_sumber_air_terlindung 99.7;
+    stats:total_jml_keluarga 7805;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4651;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 59.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 4651;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4125;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 88.7 .
+
+puskes-prop:data_2
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukomanunggal;
+    dimensi:puskesmas puskesmas:Simomulyo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Simomulyo;
+    stats:jml_keluarga_diperiksa_sumber_air 2220;
+    stats:jml_leding_meteran 2220;
+    stats:persentase_leding_meteran 100;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2220;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 20545;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2220;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 10.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 2220;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1818;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 81.9 .
+
+puskes-prop:data_3
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tandes;
+    dimensi:puskesmas puskesmas:Manukan_Kulon;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Manukan_Kulon;
+    stats:jml_keluarga_diperiksa_sumber_air 1999;
+    stats:jml_leding_meteran 1999;
+    stats:persentase_leding_meteran 100;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 1999;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 17486;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1890;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 10.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 1890;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1890;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100 .
+
+puskes-prop:data_4
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tandes;
+    dimensi:puskesmas puskesmas:Balongsari;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Balongsari;
+    stats:jml_keluarga_diperiksa_sumber_air 5970;
+    stats:jml_leding_meteran 5905;
+    stats:persentase_leding_meteran 98.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 45;
+    stats:persentase_sumur_terlindung 0.8;
+    stats:jml_sumur_tak_terlindung 20;
+    stats:persentase_sumur_tak_terlindung 0.3;
+    stats:jml_keluarga_sumber_air_terlindung 5950;
+    stats:persentase_keluarga_sumber_air_terlindung 99.7;
+    stats:total_jml_keluarga 9595;
+    stats:jml_keluarga_diperiksa_tempat_sampah 7107;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 74.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 6568;
+    stats:persentase_keluarga_memiliki_tempat_sampah 92.4;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4875;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 68.6 .
+
+puskes-prop:data_5
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Asemrowo;
+    dimensi:puskesmas puskesmas:Asemrowo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Asemrowo;
+    stats:jml_keluarga_diperiksa_sumber_air 5610;
+    stats:jml_leding_meteran 5530;
+    stats:persentase_leding_meteran 98.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 78;
+    stats:persentase_sumur_terlindung 1.4;
+    stats:jml_sumur_tak_terlindung 2;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 5608;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 10887;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5270;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 48.4;
+    stats:jml_keluarga_memiliki_tempat_sampah 5270;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 5270;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100 .       
+
+puskes-prop:data_6
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sememi;
+    dimensi:puskesmas puskesmas:Sememi;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Sememi;
+    stats:jml_keluarga_diperiksa_sumber_air 2260;
+    stats:jml_leding_meteran 2260;
+    stats:persentase_leding_meteran 100;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2260;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 13702;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2260;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 16.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 2260;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2119;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 93.8 .    
+
+puskes-prop:data_7
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Pakal;
+    dimensi:puskesmas puskesmas:Benowo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Benowo;
+    stats:jml_keluarga_diperiksa_sumber_air 8656;
+    stats:jml_leding_meteran 7153;
+    stats:persentase_leding_meteran 82.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 1503;
+    stats:persentase_sumur_terlindung 17.4;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 8656;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 12054;
+    stats:jml_keluarga_diperiksa_tempat_sampah 8250;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 68.4;
+    stats:jml_keluarga_memiliki_tempat_sampah 8250;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 7349;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 89.1 .
+
+puskes-prop:data_8
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Lakarsantri;
+    dimensi:puskesmas puskesmas:Jeruk;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Jeruk;
+    stats:jml_keluarga_diperiksa_sumber_air 3517;
+    stats:jml_leding_meteran 3434;
+    stats:persentase_leding_meteran 97.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 45;
+    stats:persentase_sumur_terlindung 1.3;
+    stats:jml_sumur_tak_terlindung 38;
+    stats:persentase_sumur_tak_terlindung 1.1;
+    stats:jml_keluarga_sumber_air_terlindung 3479;
+    stats:persentase_keluarga_sumber_air_terlindung 98.8;
+    stats:total_jml_keluarga 4393;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2591;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 59;
+    stats:jml_keluarga_memiliki_tempat_sampah 2523;
+    stats:persentase_keluarga_memiliki_tempat_sampah 97.4;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1962;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 75.7 .
+
+puskes-prop:data_9
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Lakarsantri;
+    dimensi:puskesmas puskesmas:Lidah_Kulon;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Lidah_Kulon;
+    stats:jml_keluarga_diperiksa_sumber_air 2136;
+    stats:jml_leding_meteran 2130;
+    stats:persentase_leding_meteran 99.7;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 5;
+    stats:persentase_sumur_terlindung 0.2;
+    stats:jml_sumur_tak_terlindung 1;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2135;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 7597;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2880;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 37.9;
+    stats:jml_keluarga_memiliki_tempat_sampah 2701;
+    stats:persentase_keluarga_memiliki_tempat_sampah 93.8;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2494;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 86.6 .
+
+puskes-prop:data_10
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Lakarsantri;
+    dimensi:puskesmas puskesmas:Bangkingan;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Bangkingan;
+    stats:jml_keluarga_diperiksa_sumber_air 1293;
+    stats:jml_leding_meteran 1290;
+    stats:persentase_leding_meteran 99.8;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 3;
+    stats:persentase_sumur_terlindung 0.2;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 1293;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 3583;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1870;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 52.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 1870;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 638;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 34.1 .
+
+puskes-prop:data_11
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sambikerep;
+    dimensi:puskesmas puskesmas:Lontar;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Lontar;
+    stats:jml_keluarga_diperiksa_sumber_air 5883;
+    stats:jml_leding_meteran 5839;
+    stats:persentase_leding_meteran 99.3;
+    stats:jml_pompa 3;
+    stats:persentase_pompa 0.1;
+    stats:jml_sumur_terlindung 41;
+    stats:persentase_sumur_terlindung 0.7;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 5883;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 12857;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1360;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 10.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 1346;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1299;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 95.5 .    
+
+puskes-prop:data_12
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sambikerep;
+    dimensi:puskesmas puskesmas:Made;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Made;
+    stats:jml_keluarga_diperiksa_sumber_air 1020;
+    stats:jml_leding_meteran 998;
+    stats:persentase_leding_meteran 97.8;
+    stats:jml_pompa 1;
+    stats:persentase_pompa 0.1;
+    stats:jml_sumur_terlindung 21;
+    stats:persentase_sumur_terlindung 2.1;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 1020;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 3529;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1010;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 28.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 999;
+    stats:persentase_keluarga_memiliki_tempat_sampah 98.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 962;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 95.2 .
+
+puskes-prop:data_13
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Genteng;
+    dimensi:puskesmas puskesmas:Peneleh;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Peneleh;
+    stats:jml_keluarga_diperiksa_sumber_air 2509;
+    stats:jml_leding_meteran 2234;
+    stats:persentase_leding_meteran 89;
+    stats:jml_pompa 188;
+    stats:persentase_pompa 7.5;
+    stats:jml_sumur_terlindung 17;
+    stats:persentase_sumur_terlindung 0.7;
+    stats:jml_sumur_tak_terlindung 70;
+    stats:persentase_sumur_tak_terlindung 2.8;
+    stats:jml_keluarga_sumber_air_terlindung 2439;
+    stats:persentase_keluarga_sumber_air_terlindung 97.2;
+    stats:total_jml_keluarga 13760;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5554;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 40.4;
+    stats:jml_keluarga_memiliki_tempat_sampah 5512;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.2;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 5146;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 92.7 .
+
+puskes-prop:data_14
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Genteng;
+    dimensi:puskesmas puskesmas:Ketabang;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Ketabang;
+    stats:jml_keluarga_diperiksa_sumber_air 3318;
+    stats:jml_leding_meteran 3209;
+    stats:persentase_leding_meteran 96.7;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 109;
+    stats:persentase_sumur_terlindung 3.3;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 3318;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 6595;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2474;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 37.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 2383;
+    stats:persentase_keluarga_memiliki_tempat_sampah 96.3;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1643;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 66.4.
+
+puskes-prop:data_15
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tegalsari;
+    dimensi:puskesmas puskesmas:Kedungdoro;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Kedungdoro;
+    stats:jml_keluarga_diperiksa_sumber_air 1357;
+    stats:jml_leding_meteran 1293;
+    stats:persentase_leding_meteran 95.3;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 45;
+    stats:persentase_sumur_terlindung 3.3;
+    stats:jml_sumur_tak_terlindung 19;
+    stats:persentase_sumur_tak_terlindung 1.4;
+    stats:jml_keluarga_sumber_air_terlindung 1338;
+    stats:persentase_keluarga_sumber_air_terlindung 98.6;
+    stats:total_jml_keluarga 13443;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1198;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 8.9;
+    stats:jml_keluarga_memiliki_tempat_sampah 1198;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 985;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 82.2 .
+
+puskes-prop:data_16
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tegalsari;
+    dimensi:puskesmas puskesmas:Dr_Soetomo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Dr_Soetomo;
+    stats:jml_keluarga_diperiksa_sumber_air 4537;
+    stats:jml_leding_meteran 4217;
+    stats:persentase_leding_meteran 92.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 106;
+    stats:persentase_sumur_terlindung 2.3;
+    stats:jml_sumur_tak_terlindung 214;
+    stats:persentase_sumur_tak_terlindung 4.7;
+    stats:jml_keluarga_sumber_air_terlindung 4323;
+    stats:persentase_keluarga_sumber_air_terlindung 95.3;
+    stats:total_jml_keluarga 20064;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2721;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 13.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 2716;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.8;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2691;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 98.9 .
+
+puskes-prop:data_17
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Bubutan;
+    dimensi:puskesmas puskesmas:Tembok_Dukuh;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tembok_Dukuh;
+    stats:jml_keluarga_diperiksa_sumber_air 8131;
+    stats:jml_leding_meteran 5017;
+    stats:persentase_leding_meteran 61.7;
+    stats:jml_pompa 943;
+    stats:persentase_pompa 12;
+    stats:jml_sumur_terlindung 2171;
+    stats:persentase_sumur_terlindung 26.7;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 8131;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 19279;
+    stats:jml_keluarga_diperiksa_tempat_sampah 8327;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 43.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 8327;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 6313;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 75.8 .
+
+puskes-prop:data_18
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Bubutan;
+    dimensi:puskesmas puskesmas:Gundih;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Gundih;
+    stats:jml_keluarga_diperiksa_sumber_air 2670;
+    stats:jml_leding_meteran 2480;
+    stats:persentase_leding_meteran 92.9;
+    stats:jml_pompa 73;
+    stats:persentase_pompa 2.7;
+    stats:jml_sumur_terlindung 117;
+    stats:persentase_sumur_terlindung 4.4;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2670;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 13857;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2670;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 19.3;
+    stats:jml_keluarga_memiliki_tempat_sampah 2670;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2317;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 86.8 .
+
+puskes-prop:data_19
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Simokerto;
+    dimensi:puskesmas puskesmas:Tambakrejo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tambakrejo;
+    stats:jml_keluarga_diperiksa_sumber_air 2550;
+    stats:jml_leding_meteran 1476;
+    stats:persentase_leding_meteran 57.9;
+    stats:jml_pompa 181;
+    stats:persentase_pompa 7.1;
+    stats:jml_sumur_terlindung 893;
+    stats:persentase_sumur_terlindung 35;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2550;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 18839;
+    stats:jml_keluarga_diperiksa_tempat_sampah 7490;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 39.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 7490;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 5897;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 78.7 . 
+
+puskes-prop:data_20
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Simokerto;
+    dimensi:puskesmas puskesmas:Simolawang;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Simolawang;
+    stats:jml_keluarga_diperiksa_sumber_air 2398;
+    stats:jml_leding_meteran 2228;
+    stats:persentase_leding_meteran 92.9;
+    stats:jml_pompa 81;
+    stats:persentase_pompa 3.4;
+    stats:jml_sumur_terlindung 54;
+    stats:persentase_sumur_terlindung 2.3;
+    stats:jml_sumur_tak_terlindung 35;
+    stats:persentase_sumur_tak_terlindung 1.5;
+    stats:jml_keluarga_sumber_air_terlindung 2363;
+    stats:persentase_keluarga_sumber_air_terlindung 98.5;
+    stats:total_jml_keluarga 11239;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3578;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 31.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 3483;
+    stats:persentase_keluarga_memiliki_tempat_sampah 97.3;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2956;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 82.6 . 
+
+puskes-prop:data_21
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Pabean_Cantikan;
+    dimensi:puskesmas puskesmas:Perak_Timur;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Perak_Timur;
+    stats:jml_keluarga_diperiksa_sumber_air 8359;
+    stats:jml_leding_meteran 8275;
+    stats:persentase_leding_meteran 99;
+    stats:jml_pompa 19;
+    stats:persentase_pompa 0.2;
+    stats:jml_sumur_terlindung 65;
+    stats:persentase_sumur_terlindung 0.8;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 8359;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 25746;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2488;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 9.7;
+    stats:jml_keluarga_memiliki_tempat_sampah 2461;
+    stats:persentase_keluarga_memiliki_tempat_sampah 98.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1895;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 76.2 . 
+
+puskes-prop:data_22
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Semampir;
+    dimensi:puskesmas puskesmas:Pegirian;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Pegirian;
+    stats:jml_keluarga_diperiksa_sumber_air 4500;
+    stats:jml_leding_meteran 4280;
+    stats:persentase_leding_meteran 97.3;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 119;
+    stats:persentase_sumur_terlindung 2.6;
+    stats:jml_sumur_tak_terlindung 1;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 4499;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 16900;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5264;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 31.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 5069;
+    stats:persentase_keluarga_memiliki_tempat_sampah 96.3;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4321;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 82.1 .     
+
+puskes-prop:data_23
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Semampir;
+    dimensi:puskesmas puskesmas:Sidotopo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Sidotopo;
+    stats:jml_keluarga_diperiksa_sumber_air 3235;
+    stats:jml_leding_meteran 3035;
+    stats:persentase_leding_meteran 93.8;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 150;
+    stats:persentase_sumur_terlindung 4.6;
+    stats:jml_sumur_tak_terlindung 50;
+    stats:persentase_sumur_tak_terlindung 1.5;
+    stats:jml_keluarga_sumber_air_terlindung 3185;
+    stats:persentase_keluarga_sumber_air_terlindung 98.5;
+    stats:total_jml_keluarga 14345;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3235;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 22.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 3235;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1718;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 53.1 .     
+
+puskes-prop:data_24
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Semampir;
+    dimensi:puskesmas puskesmas:Wonokusumo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Wonokusumo;
+    stats:jml_keluarga_diperiksa_sumber_air 5992;
+    stats:jml_leding_meteran 4838;
+    stats:persentase_leding_meteran 80.7;
+    stats:jml_pompa 151;
+    stats:persentase_pompa 2.5;
+    stats:jml_sumur_terlindung 734;
+    stats:persentase_sumur_terlindung 12.2;
+    stats:jml_sumur_tak_terlindung 269;
+    stats:persentase_sumur_tak_terlindung 4.5;
+    stats:jml_keluarga_sumber_air_terlindung 5723;
+    stats:persentase_keluarga_sumber_air_terlindung 95.5;
+    stats:total_jml_keluarga 18186;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2295;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 12.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 2272;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2168;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 94.5 .    
+
+puskes-prop:data_25
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Krembangan;
+    dimensi:puskesmas puskesmas:Krembangan_Sel;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Krembangan_Sel;
+    stats:jml_keluarga_diperiksa_sumber_air 1976;
+    stats:jml_leding_meteran 1713;
+    stats:persentase_leding_meteran 86.7;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 263;
+    stats:persentase_sumur_terlindung 13.3;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 1976;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 16142;
+    stats:jml_keluarga_diperiksa_tempat_sampah 7988;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 49.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 7899;
+    stats:persentase_keluarga_memiliki_tempat_sampah 98.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 7497;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 93.9 .    
+
+puskes-prop:data_26
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Krembangan;
+    dimensi:puskesmas puskesmas:Dupak;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Dupak;
+    stats:jml_keluarga_diperiksa_sumber_air 6910;
+    stats:jml_leding_meteran 6870;
+    stats:persentase_leding_meteran 99.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 40;
+    stats:persentase_sumur_tak_terlindung 0.6;
+    stats:jml_keluarga_sumber_air_terlindung 6870;
+    stats:persentase_keluarga_sumber_air_terlindung 99.4;
+    stats:total_jml_keluarga 18771;
+    stats:jml_keluarga_diperiksa_tempat_sampah 6154;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 32.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 6154;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4169;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 67.7 .       
+
+puskes-prop:data_27
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Bulak;
+    dimensi:puskesmas puskesmas:Kenjeran;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Kenjeran;
+    stats:jml_keluarga_diperiksa_sumber_air 1759;
+    stats:jml_leding_meteran 1699;
+    stats:persentase_leding_meteran 96.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 52;
+    stats:persentase_sumur_terlindung 3;
+    stats:jml_sumur_tak_terlindung 8;
+    stats:persentase_sumur_tak_terlindung 0.5;
+    stats:jml_keluarga_sumber_air_terlindung 1751;
+    stats:persentase_keluarga_sumber_air_terlindung 99.5;
+    stats:total_jml_keluarga 11095;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4457;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 40.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 3879;
+    stats:persentase_keluarga_memiliki_tempat_sampah 87;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3036;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 68.1 .  
+
+puskes-prop:data_28
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Kenjeran;
+    dimensi:puskesmas puskesmas:Tanah_Kali_K;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tanah_Kali_K;
+    stats:jml_keluarga_diperiksa_sumber_air 791;
+    stats:jml_leding_meteran 764;
+    stats:persentase_leding_meteran 96.6;
+    stats:jml_pompa 18;
+    stats:persentase_pompa 2.3;
+    stats:jml_sumur_terlindung 5;
+    stats:persentase_sumur_terlindung 0.6;
+    stats:jml_sumur_tak_terlindung 4;
+    stats:persentase_sumur_tak_terlindung 0.5;
+    stats:jml_keluarga_sumber_air_terlindung 787;
+    stats:persentase_keluarga_sumber_air_terlindung 99.5;
+    stats:total_jml_keluarga 12815;
+    stats:jml_keluarga_diperiksa_tempat_sampah 696;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 5.4;
+    stats:jml_keluarga_memiliki_tempat_sampah 696;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 670;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 96.3 .   
+
+puskes-prop:data_29
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Kenjeran;
+    dimensi:puskesmas puskesmas:Sidotopo_W;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Sidotopo_W;
+    stats:jml_keluarga_diperiksa_sumber_air 9882;
+    stats:jml_leding_meteran 9820;
+    stats:persentase_leding_meteran 99.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 62;
+    stats:persentase_sumur_terlindung 0.6;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 9882;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 23753;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3222;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 13.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 3222;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3222;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100 .  
+
+puskes-prop:data_30
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tambaksari;
+    dimensi:puskesmas puskesmas:Rangkah;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Rangkah;
+    stats:jml_keluarga_diperiksa_sumber_air 6250;
+    stats:jml_leding_meteran 6148;
+    stats:persentase_leding_meteran 98.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 85;
+    stats:persentase_sumur_terlindung 1.4;
+    stats:jml_sumur_tak_terlindung 17;
+    stats:persentase_sumur_tak_terlindung 0.3;
+    stats:jml_keluarga_sumber_air_terlindung 6233;
+    stats:persentase_keluarga_sumber_air_terlindung 99.7;
+    stats:total_jml_keluarga 23594;
+    stats:jml_keluarga_diperiksa_tempat_sampah 6250;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 26.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 6250;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 6100;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 97.6 .   
+
+puskes-prop:data_31
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tambaksari;
+    dimensi:puskesmas puskesmas:Pacar_Keling;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Pacar_Keling;
+    stats:jml_keluarga_diperiksa_sumber_air 3250;
+    stats:jml_leding_meteran 3133;
+    stats:persentase_leding_meteran 96.4;
+    stats:jml_pompa 47;
+    stats:persentase_pompa 1.4;
+    stats:jml_sumur_terlindung 40;
+    stats:persentase_sumur_terlindung 1.2;
+    stats:jml_sumur_tak_terlindung 30;
+    stats:persentase_sumur_tak_terlindung 0.9;
+    stats:jml_keluarga_sumber_air_terlindung 3220;
+    stats:persentase_keluarga_sumber_air_terlindung 99.1;
+    stats:total_jml_keluarga 20995;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3250;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 15.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 3250;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3250;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100 .          
+
+puskes-prop:data_32
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tambaksari;
+    dimensi:puskesmas puskesmas:Gading;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Gading;
+    stats:jml_keluarga_diperiksa_sumber_air 2571;
+    stats:jml_leding_meteran 1830;
+    stats:persentase_leding_meteran 71.2;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 718;
+    stats:persentase_sumur_terlindung 27.9;
+    stats:jml_sumur_tak_terlindung 23;
+    stats:persentase_sumur_tak_terlindung 0.9;
+    stats:jml_keluarga_sumber_air_terlindung 2548;
+    stats:persentase_keluarga_sumber_air_terlindung 99.1;
+    stats:total_jml_keluarga 24924;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2554;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 10.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 2554;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2469;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 96.7 .     
+
+puskes-prop:data_33
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Gubeng;
+    dimensi:puskesmas puskesmas:Pucangsewu;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Pucangsewu;
+    stats:jml_keluarga_diperiksa_sumber_air 5227;
+    stats:jml_leding_meteran 4548;
+    stats:persentase_leding_meteran 87;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 275;
+    stats:persentase_sumur_terlindung 5.3;
+    stats:jml_sumur_tak_terlindung 404;
+    stats:persentase_sumur_tak_terlindung 7.7;
+    stats:jml_keluarga_sumber_air_terlindung 4823;
+    stats:persentase_keluarga_sumber_air_terlindung 92.3;
+    stats:total_jml_keluarga 18987;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5522;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 29.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 5463;
+    stats:persentase_keluarga_memiliki_tempat_sampah 98.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3739;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 67.7 .   
+
+puskes-prop:data_34
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Gubeng;
+    dimensi:puskesmas puskesmas:Mojo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Mojo;
+    stats:jml_keluarga_diperiksa_sumber_air 2451;
+    stats:jml_leding_meteran 1834;
+    stats:persentase_leding_meteran 74.8;
+    stats:jml_pompa 84;
+    stats:persentase_pompa 3.4;
+    stats:jml_sumur_terlindung 533;
+    stats:persentase_sumur_terlindung 21.7;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2451;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 26650;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1789;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 6.7;
+    stats:jml_keluarga_memiliki_tempat_sampah 1789;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1493;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 83.5 .  
+
+puskes-prop:data_35
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Rungkut;
+    dimensi:puskesmas puskesmas:Kalirungkut;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Kalirungkut;
+    stats:jml_keluarga_diperiksa_sumber_air 3198;
+    stats:jml_leding_meteran 3087;
+    stats:persentase_leding_meteran 96.5;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 20;
+    stats:persentase_sumur_terlindung 0.6;
+    stats:jml_sumur_tak_terlindung 91;
+    stats:persentase_sumur_tak_terlindung 2.8;
+    stats:jml_keluarga_sumber_air_terlindung 3107;
+    stats:persentase_keluarga_sumber_air_terlindung 97.2;
+    stats:total_jml_keluarga 14875;
+    stats:jml_keluarga_diperiksa_tempat_sampah 8706;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 58.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 8706;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 5839;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 67.1 . 
+
+puskes-prop:data_36
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Rungkut;
+    dimensi:puskesmas puskesmas:Medokan_Ayu;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Medokan_Ayu;
+    stats:jml_keluarga_diperiksa_sumber_air 1516;
+    stats:jml_leding_meteran 824;
+    stats:persentase_leding_meteran 54.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 556;
+    stats:persentase_sumur_terlindung 36.7;
+    stats:jml_sumur_tak_terlindung 136;
+    stats:persentase_sumur_tak_terlindung 9;
+    stats:jml_keluarga_sumber_air_terlindung 1380;
+    stats:persentase_keluarga_sumber_air_terlindung 91;
+    stats:total_jml_keluarga 14110;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1460;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 10.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 1460;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1314;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 90 . 
+
+puskes-prop:data_37
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Tenggilis;
+    dimensi:puskesmas puskesmas:Tenggilis;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tenggilis;
+    stats:jml_keluarga_diperiksa_sumber_air 10111;
+    stats:jml_leding_meteran 8580;
+    stats:persentase_leding_meteran 84.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 965;
+    stats:persentase_sumur_terlindung 9.5;
+    stats:jml_sumur_tak_terlindung 566;
+    stats:persentase_sumur_tak_terlindung 5.6;
+    stats:jml_keluarga_sumber_air_terlindung 9545;
+    stats:persentase_keluarga_sumber_air_terlindung 94.4;
+    stats:total_jml_keluarga 15670;
+    stats:jml_keluarga_diperiksa_tempat_sampah 10096;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 64.4;
+    stats:jml_keluarga_memiliki_tempat_sampah 10015;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.2;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 8495;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 84.1 . 
+
+puskes-prop:data_38
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Gunung_Anyar;
+    dimensi:puskesmas puskesmas:Gunung_Anyar;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Gunung_Anyar;
+    stats:jml_keluarga_diperiksa_sumber_air 6440;
+    stats:jml_leding_meteran 5720;
+    stats:persentase_leding_meteran 88.8;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 720;
+    stats:persentase_sumur_terlindung 11.2;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 6440;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 14248;
+    stats:jml_keluarga_diperiksa_tempat_sampah 6120;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 43;
+    stats:jml_keluarga_memiliki_tempat_sampah 6120;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3038;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 49.6 . 
+
+puskes-prop:data_39
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukolilo;
+    dimensi:puskesmas puskesmas:Menur;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Menur;
+    stats:jml_keluarga_diperiksa_sumber_air 608;
+    stats:jml_leding_meteran 480;
+    stats:persentase_leding_meteran 78.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 49;
+    stats:persentase_sumur_terlindung 8.1;
+    stats:jml_sumur_tak_terlindung 79;
+    stats:persentase_sumur_tak_terlindung 13;
+    stats:jml_keluarga_sumber_air_terlindung 529;
+    stats:persentase_keluarga_sumber_air_terlindung 87;
+    stats:total_jml_keluarga 15032;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5348;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 35.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 5348;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1793;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 33.5 . 
+
+puskes-prop:data_40
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukolilo;
+    dimensi:puskesmas puskesmas:Klampis_Ngasem;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Klampis_Ngasem;
+    stats:jml_keluarga_diperiksa_sumber_air 3038;
+    stats:jml_leding_meteran 2808;
+    stats:persentase_leding_meteran 92.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 230;
+    stats:persentase_sumur_terlindung 7.6;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 3038;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 6937;
+    stats:jml_keluarga_diperiksa_tempat_sampah 1020;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 14.7;
+    stats:jml_keluarga_memiliki_tempat_sampah 1019;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 719;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 70.5 . 
+
+puskes-prop:data_41
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukolilo;
+    dimensi:puskesmas puskesmas:Keputih;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Keputih;
+    stats:jml_keluarga_diperiksa_sumber_air 0;
+    stats:jml_leding_meteran 0;
+    stats:persentase_leding_meteran 0;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 0;
+    stats:persentase_keluarga_sumber_air_terlindung 0;
+    stats:total_jml_keluarga 8393;
+    stats:jml_keluarga_diperiksa_tempat_sampah 139;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 1.7;
+    stats:jml_keluarga_memiliki_tempat_sampah 111;
+    stats:persentase_keluarga_memiliki_tempat_sampah 79.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 109;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 78.4 . 
+
+puskes-prop:data_42
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Mulyorejo;
+    dimensi:puskesmas puskesmas:Mulyorejo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Mulyorejo;
+    stats:jml_keluarga_diperiksa_sumber_air 6040;
+    stats:jml_leding_meteran 5860;
+    stats:persentase_leding_meteran 97;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 180;
+    stats:persentase_sumur_terlindung 3;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 6040;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 24951;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2894;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 11.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 2894;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2894;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100. 
+
+puskes-prop:data_43
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sawahan;
+    dimensi:puskesmas puskesmas:Sawahan;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Sawahan;
+    stats:jml_keluarga_diperiksa_sumber_air 5178;
+    stats:jml_leding_meteran 3257;
+    stats:persentase_leding_meteran 62.9;
+    stats:jml_pompa 1365;
+    stats:persentase_pompa 26.4;
+    stats:jml_sumur_terlindung 556;
+    stats:persentase_sumur_terlindung 10.7;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 5178;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 19136;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3210;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 16.8;
+    stats:jml_keluarga_memiliki_tempat_sampah 2910;
+    stats:persentase_keluarga_memiliki_tempat_sampah 90.7;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2510;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 78.2. 
+
+puskes-prop:data_44
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sawahan;
+    dimensi:puskesmas puskesmas:Putat_Jaya;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Putat_Jaya;
+    stats:jml_keluarga_diperiksa_sumber_air 6373;
+    stats:jml_leding_meteran 6189;
+    stats:persentase_leding_meteran 97.1;
+    stats:jml_pompa 36;
+    stats:persentase_pompa 0.6;
+    stats:jml_sumur_terlindung 120;
+    stats:persentase_sumur_terlindung 1.9;
+    stats:jml_sumur_tak_terlindung 28;
+    stats:persentase_sumur_tak_terlindung 0.4;
+    stats:jml_keluarga_sumber_air_terlindung 6345;
+    stats:persentase_keluarga_sumber_air_terlindung 99.6;
+    stats:total_jml_keluarga 13123;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2910;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 22.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 2876;
+    stats:persentase_keluarga_memiliki_tempat_sampah 98.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2086;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 71.7. 
+
+puskes-prop:data_45
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sawahan;
+    dimensi:puskesmas puskesmas:Banyu_Urip;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Banyu_Urip;
+    stats:jml_keluarga_diperiksa_sumber_air 3767;
+    stats:jml_leding_meteran 3764;
+    stats:persentase_leding_meteran 99.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 3;
+    stats:persentase_sumur_terlindung 0.1;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 3767;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 19657;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3767;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 19.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 3767;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3728;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 99.0. 
+
+puskes-prop:data_46
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sawahan;
+    dimensi:puskesmas puskesmas:Pakis;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Pakis;
+    stats:jml_keluarga_diperiksa_sumber_air 4125;
+    stats:jml_leding_meteran 3999;
+    stats:persentase_leding_meteran 96.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 106;
+    stats:persentase_sumur_terlindung 2.6;
+    stats:jml_sumur_tak_terlindung 20;
+    stats:persentase_sumur_tak_terlindung 0.5;
+    stats:jml_keluarga_sumber_air_terlindung 4105;
+    stats:persentase_keluarga_sumber_air_terlindung 99.5;
+    stats:total_jml_keluarga 11432;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4125;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 36.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 4125;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3983;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 96.6 . 
+
+puskes-prop:data_47
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonokromo;
+    dimensi:puskesmas puskesmas:Jagir;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Jagir;
+    stats:jml_keluarga_diperiksa_sumber_air 495;
+    stats:jml_leding_meteran 127;
+    stats:persentase_leding_meteran 25.7;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 214;
+    stats:persentase_sumur_terlindung 43.2;
+    stats:jml_sumur_tak_terlindung 154;
+    stats:persentase_sumur_tak_terlindung 31.1;
+    stats:jml_keluarga_sumber_air_terlindung 341;
+    stats:persentase_keluarga_sumber_air_terlindung 68.9;
+    stats:total_jml_keluarga 22745;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4820;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 21.2;
+    stats:jml_keluarga_memiliki_tempat_sampah 4820;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3306;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 68.6 . 
+
+puskes-prop:data_48
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonokromo;
+    dimensi:puskesmas puskesmas:Wonokromo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Wonokromo;
+    stats:jml_keluarga_diperiksa_sumber_air 4101;
+    stats:jml_leding_meteran 2992;
+    stats:persentase_leding_meteran 73;
+    stats:jml_pompa 61;
+    stats:persentase_pompa 1.5;
+    stats:jml_sumur_terlindung 1048;
+    stats:persentase_sumur_terlindung 25.6;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 4101;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 12984;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4101;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 31.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 4101;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4101;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100. 
+
+puskes-prop:data_49
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonokromo;
+    dimensi:puskesmas puskesmas:Ngagelrejo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Ngagelrejo;
+    stats:jml_keluarga_diperiksa_sumber_air 2650;
+    stats:jml_leding_meteran 1416;
+    stats:persentase_leding_meteran 53.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 1234;
+    stats:persentase_sumur_terlindung 46.6;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2650;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 18275;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2576;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 14.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 2576;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 2433;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 94.4. 
+
+puskes-prop:data_50
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Karang_Pilang;
+    dimensi:puskesmas puskesmas:Kedurus;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Kedurus;
+    stats:jml_keluarga_diperiksa_sumber_air 7100;
+    stats:jml_leding_meteran 6466;
+    stats:persentase_leding_meteran 91.1;
+    stats:jml_pompa 110;
+    stats:persentase_pompa 1.5;
+    stats:jml_sumur_terlindung 0;
+    stats:persentase_sumur_terlindung 0;
+    stats:jml_sumur_tak_terlindung 524;
+    stats:persentase_sumur_tak_terlindung 7.4;
+    stats:jml_keluarga_sumber_air_terlindung 6576;
+    stats:persentase_keluarga_sumber_air_terlindung 92.6;
+    stats:total_jml_keluarga 21649;
+    stats:jml_keluarga_diperiksa_tempat_sampah 7140;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 33;
+    stats:jml_keluarga_memiliki_tempat_sampah 7140;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4852;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 68.
+
+ puskes-prop:data_51
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Dukuh_Pakis;
+    dimensi:puskesmas puskesmas:Dukuh_Kupang;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Dukuh_Kupang;
+    stats:jml_keluarga_diperiksa_sumber_air 9487;
+    stats:jml_leding_meteran 9447;
+    stats:persentase_leding_meteran 99.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 40;
+    stats:persentase_sumur_terlindung 0.4;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 9487;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 17595;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2410;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 13.7;
+    stats:jml_keluarga_memiliki_tempat_sampah 2410;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1810;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 75.1.
+
+puskes-prop:data_52
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wiyung;
+    dimensi:puskesmas puskesmas:Wiyung;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Wiyung;
+    stats:jml_keluarga_diperiksa_sumber_air 3400;
+    stats:jml_leding_meteran 3325;
+    stats:persentase_leding_meteran 97.8;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 75;
+    stats:persentase_sumur_terlindung 2.2;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 3400;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 15769;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4250;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 27;
+    stats:jml_keluarga_memiliki_tempat_sampah 4250;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3871;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 91.1.
+
+puskes-prop:data_53
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wiyung;
+    dimensi:puskesmas puskesmas:Balas_Klumprik;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Balas_Klumprik;
+    stats:jml_keluarga_diperiksa_sumber_air 850;
+    stats:jml_leding_meteran 843;
+    stats:persentase_leding_meteran 99.2;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 7;
+    stats:persentase_sumur_terlindung 0.8;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 850;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 3242;
+    stats:jml_keluarga_diperiksa_tempat_sampah 166;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 5.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 166;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 151;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 91.
+
+puskes-prop:data_54
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Gayungan;
+    dimensi:puskesmas puskesmas:Gayungan;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Gayungan;
+    stats:jml_keluarga_diperiksa_sumber_air 1971;
+    stats:jml_leding_meteran 1842;
+    stats:persentase_leding_meteran 93.5;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 51;
+    stats:persentase_sumur_terlindung 2.6;
+    stats:jml_sumur_tak_terlindung 78;
+    stats:persentase_sumur_tak_terlindung 4;
+    stats:jml_keluarga_sumber_air_terlindung 1893;
+    stats:persentase_keluarga_sumber_air_terlindung 96;
+    stats:total_jml_keluarga 13580;
+    stats:jml_keluarga_diperiksa_tempat_sampah 5088;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 37.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 5051;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.3;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4801;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 94.4.
+
+puskes-prop:data_55
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonocolo;
+    dimensi:puskesmas puskesmas:Jemursari;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Jemursari;
+    stats:jml_keluarga_diperiksa_sumber_air 2210;
+    stats:jml_leding_meteran 1326;
+    stats:persentase_leding_meteran 60;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 884;
+    stats:persentase_sumur_terlindung 40;
+    stats:jml_sumur_tak_terlindung 0;
+    stats:persentase_sumur_tak_terlindung 0;
+    stats:jml_keluarga_sumber_air_terlindung 2210;
+    stats:persentase_keluarga_sumber_air_terlindung 100;
+    stats:total_jml_keluarga 6776;
+    stats:jml_keluarga_diperiksa_tempat_sampah 2110;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 31.1;
+    stats:jml_keluarga_memiliki_tempat_sampah 2110;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 1720;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 81.5.
+
+puskes-prop:data_56
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonocolo;
+    dimensi:puskesmas puskesmas:Sidosermo;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Sidosermo;
+    stats:jml_keluarga_diperiksa_sumber_air 2319;
+    stats:jml_leding_meteran 2204;
+    stats:persentase_leding_meteran 95;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 21;
+    stats:persentase_sumur_terlindung 0.9;
+    stats:jml_sumur_tak_terlindung 94;
+    stats:persentase_sumur_tak_terlindung 4.1;
+    stats:jml_keluarga_sumber_air_terlindung 2225;
+    stats:persentase_keluarga_sumber_air_terlindung 95.9;
+    stats:total_jml_keluarga 11573;
+    stats:jml_keluarga_diperiksa_tempat_sampah 6055;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 52.3;
+    stats:jml_keluarga_memiliki_tempat_sampah 6047;
+    stats:persentase_keluarga_memiliki_tempat_sampah 99.9;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 5782;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 95.5.
+
+puskes-prop:data_57
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Wonocolo;
+    dimensi:puskesmas puskesmas:Siwalankerto;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Siwalankerto;
+    stats:jml_keluarga_diperiksa_sumber_air 432;
+    stats:jml_leding_meteran 192;
+    stats:persentase_leding_meteran 44.4;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 135;
+    stats:persentase_sumur_terlindung 31.3;
+    stats:jml_sumur_tak_terlindung 105;
+    stats:persentase_sumur_tak_terlindung 24.3;
+    stats:jml_keluarga_sumber_air_terlindung 327;
+    stats:persentase_keluarga_sumber_air_terlindung 75.7;
+    stats:total_jml_keluarga 4465;
+    stats:jml_keluarga_diperiksa_tempat_sampah 380;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 8.5;
+    stats:jml_keluarga_memiliki_tempat_sampah 380;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 300;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 78.9.
+
+puskes-prop:data_58
+    a qb:Observation, vocab:data_puskesmas;
+    qb:DataSet eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Jambangan;
+    dimensi:puskesmas puskesmas:Kebonsari;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Kebonsari;
+    stats:jml_keluarga_diperiksa_sumber_air 3949;
+    stats:jml_leding_meteran 3588;
+    stats:persentase_leding_meteran 90.9;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 180;
+    stats:persentase_sumur_terlindung 4.6;
+    stats:jml_sumur_tak_terlindung 181;
+    stats:persentase_sumur_tak_terlindung 4.6;
+    stats:jml_keluarga_sumber_air_terlindung 3768;
+    stats:persentase_keluarga_sumber_air_terlindung 95.4;
+    stats:total_jml_keluarga 13466;
+    stats:jml_keluarga_diperiksa_tempat_sampah 3370;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 25;
+    stats:jml_keluarga_memiliki_tempat_sampah 3370;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 3370;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 100.
