@@ -1,0 +1,839 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+@prefix sdmx-concept:    <http://purl.org/linked-data/sdmx/2009/concept#> .
+@prefix sdmx-dimension:  <http://purl.org/linked-data/sdmx/2009/dimension#> .
+@prefix sdmx-attribute:  <http://purl.org/linked-data/sdmx/2009/attribute#> .
+@prefix sdmx-measure:    <http://purl.org/linked-data/sdmx/2009/measure#> .
+@prefix sdmx-metadata:   <http://purl.org/linked-data/sdmx/2009/metadata#> .
+@prefix sdmx-code:       <http://purl.org/linked-data/sdmx/2009/code#> .
+@prefix sdmx-subject:    <http://purl.org/linked-data/sdmx/2009/subject#> .
+
+@prefix konsep: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix dimensi: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix stats: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix vocab: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix kecamatan: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix puskesmas: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix puskes-prop: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix sumberair: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+@prefix tempatsampah: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+
+@prefix eg: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+
+
+# -- Vocab  ----------------------------
+
+vocab:kecamatan a rdfs:Class .
+vocab:puskesmas a rdfs:Class .
+vocab:data_puskesmas a rdfs:Class .
+
+
+
+# -- Concept  ----------------------------
+
+konsep:Puskesmas_Surabaya 
+    a skos:ConceptScheme ;
+    rdfs:label "Puskesmas_di_Surabaya";
+    skos:hasTopConcept puskesmas:Tanjungsari, puskesmas:Simomulyo, puskesmas:Manukan_Kulon, puskesmas:Balongsari, puskesmas:Asemrowo, puskesmas:Sememi, puskesmas:Benowo, puskesmas:Jeruk, puskesmas:Lidah_Kulon, puskesmas:Bangkingan, puskesmas:Lontar, puskesmas:Made, puskesmas:Paneleh, puskesmas:Ketabang, puskesmas:Kedungdoro, puskesmas:Dr_Soetomo, puskesmas:Tembok_Dukuh, puskesmas:Gundih, puskesmas:Tambakrejo, puskesmas:Simolawang, puskesmas:Perak_Timur, puskesmas:Pegirian, puskesmas:Sidotopo, puskesmas:Wonokusumo, puskesmas:Krembangan_Sel, puskesmas:Dupak, puskesmas:Kenjeran, puskesmas:Tanah_Kali_K, puskesmas:Sidotopo_W, puskesmas:Rangkah, puskesmas:Pacar_Keling, puskesmas:Gading, puskesmas:Pucangsewu, puskesmas:Mojo, puskesmas:Kalirungkut, puskesmas:Medokan_Ayu, puskesmas:Tenggilis, puskesmas:Gunung_Anyar, puskesmas:Menur, puskesmas:Klampis_Ngasem, puskesmas:Keputih, puskesmas:Mulyorejo, puskesmas:Sawahan, puskesmas:Putat_Jaya, puskesmas:Banyu_Urip, puskesmas:Pakis, puskesmas:Jagir, puskesmas:Wonokromo, puskesmas:Ngagelrejo, puskesmas:Kedurus, puskesmas:Dukuh_Kupang, puskesmas:Wiyung, puskesmas:Balas_Klumprik, puskesmas:Gayungan, puskesmas:Jemursari, puskesmas:Sidosermo, puskesmas:Siwalankerto, puskesmas:Kebonsari;
+    skos:notation "Puskesmas_Surabaya" .
+
+konsep:Kecamatan_Surabaya 
+    a skos:ConceptScheme ;
+    rdfs:label "Puskesmas_di_Surabaya";
+    skos:hasTopConcept kecamatan:Sukomanunggal, kecamatan:Tandes, kecamatan:Asemrowo, kecamatan:Sememi, kecamatan:Pakal, kecamatan:Lakarsantri, kecamatan:Sambikerep, kecamatan:Genteng, kecamatan:Tegalsari, kecamatan:Bubutan, kecamatan:Simokerto, kecamatan:Pabean_Cantikan, kecamatan:Semampir, kecamatan:Krembangan, kecamatan:Bulak, kecamatan:Kenjeran, kecamatan:Tambaksari, kecamatan:Gubeng, kecamatan:Rungkut, kecamatan:Tenggilis, kecamatan:Gunung_Anyar, kecamatan:Sukolilo, kecamatan:Mulyorejo, kecamatan:Sawahan, kecamatan:Wonokromo, kecamatan:Karang_Pilang, kecamatan:Dukuh_Pakis, kecamatan:Wiyung, kecamatan:Gayungan, kecamatan:Wonocolo, kecamatan:Jambangan;
+    skos:notation "Kecamatan_Surabaya" .    
+
+konsep:Sumber_Air 
+    a skos:ConceptScheme ;
+    rdfs:label "Sumber_Air";
+    skos:hasTopConcept sumberair:Leding_Meteran, sumberair:Pompa, sumberair:Sumur_Terlindung, sumberair:Sumur_Tak_Terlindung; 
+    skos:notation "Sumber_Air" .
+
+konsep:Tempat_Sampah 
+    a skos:ConceptScheme ;
+    rdfs:label "Tempat_Sampah";
+    skos:hasTopConcept tempatsampah:Keluarga_Diperiksa, tempatsampah:Keluarga_Memiliki, tempatsampah:Sehat;
+    skos:notation "Tempat_Sampah" .
+
+
+
+# -- Dimensions----------------------------
+
+dimensi:waktu a rdf:Property, qb:DimensionProperty;
+    rdfs:label "referensi waktu"@id;
+    rdfs:subPropertyOf sdmx-dimension:refPeriod;
+    rdfs:range xsd:gYear;
+    qb:concept sdmx-concept:refPeriod ;
+    .
+
+dimensi:puskesmas
+    rdfs:label "referensi puskesmas"@id;
+    qb:codeList konsep:Puskesmas_Surabaya;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:kecamatan
+    rdfs:label "referensi kecamatan"@id;
+    qb:codeList konsep:Kecamatan_Surabaya;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:sumberair
+    rdfs:label "referensi sumber air"@id;
+    qb:codeList konsep:Sumber_Air;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+dimensi:tempatsampah
+    rdfs:label "referensi tempat sampah"@id;
+    qb:codeList konsep:Tempat_Sampah;
+    a rdf:Property, qb:DimensionProperty;
+    rdfs:range skos:Concept .    
+
+
+
+# -- Measures  ----------------------------    
+
+stats:jml_keluarga_diperiksa_sumber_air a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga diperiksa sumber air"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .    
+
+stats:jml_leding_meteran a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah leding meteran"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_leding_meteran a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase leding meteran"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_pompa a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah leding pompa"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_pompa a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase pompa"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .           
+
+stats:jml_sumur_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah sumur terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .  
+
+stats:persentase_sumur_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase sumur terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .  
+
+stats:jml_sumur_tak_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah sumur tak terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_sumur_tak_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase sumur tak terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_sumber_air_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jml keluarga sumber air terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_sumber_air_terlindung a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga sumber air terlindung"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:total_jml_keluarga a rdf:Property, qb:MeasureProperty;
+    rdfs:label "total jumlah keluarga"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:jml_keluarga_diperiksa_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga diperiksa tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_diperiksa_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga diperiksa tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_memiliki_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga memiliki tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_memiliki_tempat_sampah a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga memiliki tempat sampah"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+stats:jml_keluarga_memiliki_tempat_sampah_sehat a rdf:Property, qb:MeasureProperty;
+    rdfs:label "jumlah keluarga memiliki tempat sampah sehat"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:integer ;
+    .
+
+stats:persentase_keluarga_memiliki_tempat_sampah_sehat a rdf:Property, qb:MeasureProperty;
+    rdfs:label "persentase keluarga memiliki tempat sampah sehat"@id;
+    rdfs:subPropertyOf sdmx-measure:obsValue;
+    rdfs:range xsd:double ;
+    .
+
+
+
+# -- Property  ----------------------------
+
+puskes-prop:berlokasi_di_kecamatan a rdf:Property .
+puskes-prop:berlokasi_di_kecamatan  rdfs:domain vocab:puskesmas .
+puskes-prop:berlokasi_di_kecamatan  rdfs:range vocab:kecamatan.
+
+puskes-prop:data_puskesmas_dari a rdf:Property .
+puskes-prop:data_puskesmas_dari rdfs:domain vocab:data_puskesmas.
+puskes-prop:data_puskesmas_dari rdfs:range vocab:puskesmas.
+
+
+
+
+# -- Data set ----------------------------
+
+eg:data_puskesmas_2012
+    a qb:DataSet;
+    qb:structure stats:dsd-pk.
+
+
+
+# -- Data structure definition  ----------------------------
+
+stats:dsd-pk
+    a qb:DataStructureDefinition ;
+
+    # The dimensions
+    qb:component 
+        [qb:dimension dimensi:puskesmas],
+        [qb:dimension dimensi:kecamatan],
+        [qb:dimension dimensi:waktu],
+        [qb:dimension dimensi:sumberair],
+        [qb:dimension dimensi:tempatsampah]; 
+
+    # The measure(s)
+    qb:component 
+        [ qb:measure stats:jml_keluarga_diperiksa_sumber_air],
+        [ qb:measure stats:jml_leding_meteran],
+        [ qb:measure stats:persentase_leding_meteran],
+        [ qb:measure stats:jml_pompa],
+        [ qb:measure stats:persentase_pompa],
+        [ qb:measure stats:jml_sumur_terlindung],
+        [ qb:measure stats:persentase_sumur_terlindung],
+        [ qb:measure stats:jml_sumur_tak_terlindung],
+        [ qb:measure stats:persentase_sumur_tak_terlindung],
+        [ qb:measure stats:jml_keluarga_sumber_air_terlindung],
+        [ qb:measure stats:persentase_keluarga_sumber_air_terlindung],
+        [ qb:measure stats:total_jml_keluarga],
+        [ qb:measure stats:jml_keluarga_diperiksa_tempat_sampah],
+        [ qb:measure stats:persentase_keluarga_diperiksa_tempat_sampah],
+        [ qb:measure stats:jml_keluarga_memiliki_tempat_sampah],
+        [ qb:measure stats:persentase_keluarga_memiliki_tempat_sampah],
+        [ qb:measure stats:jml_keluarga_memiliki_tempat_sampah_sehat],
+        [ qb:measure stats:persentase_keluarga_memiliki_tempat_sampah_sehat] .
+
+
+
+# -- Data definition  ----------------------------
+
+kecamatan:Sukomanunggal 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sukomanunggal";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tandes 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tandes";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Asemrowo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Asemrowo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sememi 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sememi";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Pakal 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Pakal";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Lakarsantri 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Lakarsantri";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sambikerep 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sambikerep";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Genteng 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Genteng";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tegalsari 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tegalsari";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Bubutan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Bubutan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Simokerto 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Simokerto";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Pabean_Cantikan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Pabean_Cantikan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Semampir 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Semampir";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Krembangan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Krembangan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Bulak 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Bulak";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Kenjeran 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Kenjeran";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tambaksari 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tambaksari";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gubeng 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gubeng";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Rungkut 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Rungkut";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Tenggilis 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Tenggilis";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gunung_Anyar 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gunung_Anyar";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sukolilo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sukolilo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Mulyorejo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Mulyorejo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Sawahan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Sawahan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wonokromo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wonokromo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Karang_Pilang 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Karang_Pilang";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Dukuh_Pakis 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Dukuh_Pakis";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wiyung 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wiyung";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Gayungan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Gayungan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Wonocolo 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Wonocolo";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+kecamatan:Jambangan 
+    a skos:Concept, vocab:kecamatan;
+    rdfs:label "Jambangan";
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+
+puskesmas:Tanjungsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tanjungsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukomanunggal;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Simomulyo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Simomulyo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukomanunggal;
+    skos:inScheme konsep:Puskesmas_Surabaya .  
+
+puskesmas:Manukan_Kulon 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Manukan_Kulon";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tandes;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Balongsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Balongsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tandes;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Asemrowo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Asemrowo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Asemrowo;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Sememi 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sememi";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sememi;
+    skos:inScheme konsep:Puskesmas_Surabaya .     
+
+puskesmas:Benowo
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Benowo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Pakal;
+    skos:inScheme konsep:Puskesmas_Surabaya .       
+
+puskesmas:Jeruk
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jeruk";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Lidah_Kulon 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Lidah_Kulon";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .         
+
+puskesmas:Bangkingan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Bangkingan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Lakarsantri;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Lontar 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Lontar";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sambikerep;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Made 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Made";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sambikerep;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Paneleh 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Paneleh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Genteng;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Ketabang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Ketabang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Genteng;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Kedungdoro 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kedungdoro";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tegalsari;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Dr_Soetomo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dr_Soetomo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tegalsari;
+    skos:inScheme konsep:Puskesmas_Surabaya .   
+
+puskesmas:Tembok_Dukuh 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tembok_Dukuh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bubutan;
+    skos:inScheme konsep:Puskesmas_Surabaya .  
+
+puskesmas:Gundih 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tembok_Dukuh";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bubutan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tambakrejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tambakrejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Simokerto;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Simolawang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Simolawang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Simokerto;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Perak_Timur 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Perak_Timur";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Pabean_Cantikan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pegirian 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pegirian";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidotopo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidotopo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wonokusumo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wonokusumo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Semampir;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Krembangan_Sel 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Krembangan_Sel";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Krembangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Dupak 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dupak";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Krembangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kenjeran 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kenjeran";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Bulak;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tanah_Kali_K 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tanah_Kali_K";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Kenjeran;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidotopo_W 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidotopo_W";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Kenjeran;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Rangkah 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Rangkah";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pacar_Keling 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pacar_Keling";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Gading 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gading";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tambaksari;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pucangsewu 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pucangsewu";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gubeng;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Mojo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Mojo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gubeng;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kalirungkut 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kalirungkut";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Rungkut;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Medokan_Ayu 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Medokan_Ayu";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Rungkut;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Tenggilis 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Tenggilis";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Tenggilis;
+    skos:inScheme konsep:Puskesmas_Surabaya .
+
+puskesmas:Gunung_Anyar 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gunung_Anyar";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gunung_Anyar;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Menur 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Menur";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Klampis_Ngasem 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Klampis_Ngasem";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Keputih 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Keputih";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sukolilo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Mulyorejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Mulyorejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Mulyorejo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sawahan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sawahan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Putat_Jaya 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Putat_Jaya";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Banyu_Urip 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Banyu_Urip";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Pakis 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Pakis";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Sawahan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Jagir 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jagir";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wonokromo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wonokromo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Ngagelrejo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Ngagelrejo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonokromo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kedurus 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kedurus";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Karang_Pilang;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Dukuh_Kupang 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Dukuh_Kupang";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Dukuh_Pakis;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Wiyung 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Wiyung";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wiyung;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Balas_Klumprik 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Balas_Klumprik";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wiyung;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Gayungan 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Gayungan";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Gayungan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Jemursari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Jemursari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Sidosermo 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Sidosermo";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Siwalankerto 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Siwalankerto";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Wonocolo;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+puskesmas:Kebonsari 
+    a skos:Concept, vocab:puskesmas;
+    rdfs:label "Kebonsari";
+    puskes-prop:berlokasi_di_kecamatan kecamatan:Jambangan;
+    skos:inScheme konsep:Puskesmas_Surabaya . 
+
+
+sumberair:Leding_Meteran 
+    a skos:Concept;
+    rdfs:label "Leding_Meteran";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Pompa 
+    a skos:Concept;
+    rdfs:label "Pompa";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Sumur_Terlindung 
+    a skos:Concept;
+    rdfs:label "Sumur_Terlindung";
+    skos:inScheme konsep:Sumber_Air . 
+
+sumberair:Sumur_Tak_Terlindung 
+    a skos:Concept;
+    rdfs:label "Sumur_Tak_Terlindung";
+    skos:inScheme konsep:Sumber_Air . 
+
+
+tempatsampah:Keluarga_Diperiksa
+    a skos:Concept;
+    rdfs:label "Sumur_Tak_Terlindung";
+    skos:inScheme konsep:Tempat_Sampah .
+
+tempatsampah:Keluarga_Memiliki
+    a skos:Concept;
+    rdfs:label "Keluarga_Memiliki";
+    skos:inScheme konsep:Tempat_Sampah .
+
+tempatsampah:Sehat
+    a skos:Concept;
+    rdfs:label "Sehat";
+    skos:inScheme konsep:Tempat_Sampah .
+
+# -- Observation ----------------------------
+
+puskes-prop:data_1
+    a qb:Observation, vocab:data_puskesmas;
+    qb:eg:data_puskesmas_2012 eg:data_puskesmas_2012;
+    dimensi:kecamatan kecamatan:Sukomanunggal;
+    dimensi:puskesmas puskesmas:Tanjungsari;
+    dimensi:waktu 2012;
+    puskes-prop:data_puskesmas_dari puskesmas:Tanjungsari;
+    stats:jml_keluarga_diperiksa_sumber_air 3385;
+    stats:jml_leding_meteran 3339;
+    stats:persentase_leding_meteran 98.6;
+    stats:jml_pompa 0;
+    stats:persentase_pompa 0;
+    stats:jml_sumur_terlindung 36;
+    stats:persentase_sumur_terlindung 1.1;
+    stats:jml_sumur_tak_terlindung 10;
+    stats:persentase_sumur_tak_terlindung 0.3;
+    stats:jml_keluarga_sumber_air_terlindung 3375;
+    stats:persentase_keluarga_sumber_air_terlindung 99.7;
+    stats:total_jml_keluarga 7805;
+    stats:jml_keluarga_diperiksa_tempat_sampah 4651;
+    stats:persentase_keluarga_diperiksa_tempat_sampah 59.6;
+    stats:jml_keluarga_memiliki_tempat_sampah 4651;
+    stats:persentase_keluarga_memiliki_tempat_sampah 100;
+    stats:jml_keluarga_memiliki_tempat_sampah_sehat 4125;
+    stats:persentase_keluarga_memiliki_tempat_sampah_sehat 88.7 .
+
+
