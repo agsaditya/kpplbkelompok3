@@ -22,6 +22,8 @@
 @prefix sumberair: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
 @prefix tempatsampah: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
 
+@prefix eg: <https://raw.githubusercontent.com/agsaditya/kpplbkelompok3/master/rdfcube.ttl#> .
+
 
 # -- Vocab  ----------------------------
 
@@ -221,7 +223,7 @@ puskes-prop:data_puskesmas_dari rdfs:range vocab:puskesmas.
 
 # -- Data set ----------------------------
 
-stats:data_puskesmas_2012
+eg:data_puskesmas_2012
     a qb:DataSet;
     qb:structure stats:dsd-pk.
 
@@ -810,7 +812,7 @@ tempatsampah:Sehat
 
 puskes-prop:data_1
     a qb:Observation, vocab:data_puskesmas;
-    qb:DataSet stats:data_puskesmas_2012;
+    qb:eg:data_puskesmas_2012 eg:data_puskesmas_2012;
     dimensi:kecamatan kecamatan:Sukomanunggal;
     dimensi:puskesmas puskesmas:Tanjungsari;
     dimensi:waktu 2012;
